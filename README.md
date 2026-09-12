@@ -23,6 +23,9 @@ one package instead of installing the two lilToon packages side by side. The
 separate `liltoon-preset-applicator` `0.1.x` entries remain available for
 projects that still depend on the legacy package ID.
 
+The source-side static audit and staged Unity acceptance plan are documented in
+[`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
+
 ## VCC install
 
 1. In VCC or ALCOM, open `Settings > Packages > Add Repository`.
