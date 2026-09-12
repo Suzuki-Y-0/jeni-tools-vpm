@@ -18,6 +18,14 @@ and its index is available at
 `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
 All 13 `0.1.0` package releases are available from that repository.
 
+## VCC install
+
+1. In VCC, open `Settings > Packages > Add Repository`.
+2. Add `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
+3. Add the Jeni package you want to the project. Use the green update arrow when a newer release is available.
+
+Register the NDMF, Modular Avatar, lilToon, and other external repositories in each project as needed.
+
 The package set deliberately excludes the empty `EyeWobble` folder, legacy
 `FaceTraBlendshapeComposer` documents, generated avatar assets, test fixtures,
 archives, nested `.git` directories, and the source-only `Outline`, `QVPenSigner`
