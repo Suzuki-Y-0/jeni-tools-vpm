@@ -25,9 +25,13 @@ still depend on the legacy package ID.
 
 ## VCC install
 
-1. In VCC, open `Settings > Packages > Add Repository`.
+1. In VCC or ALCOM, open `Settings > Packages > Add Repository`.
 2. Add `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
 3. Add the Jeni package you want to the project. Use the green update arrow when a newer release is available.
+
+ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
+project manager to install or update the package versions; the unified lilToon
+release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.0`.
 
 Register the NDMF, Modular Avatar, lilToon, and other external repositories in each project as needed.
 
