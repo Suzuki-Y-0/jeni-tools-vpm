@@ -8,7 +8,7 @@ It writes only to `dist-ready/`; it never edits or synchronizes the Unity projec
 python tools/build_vpm.py --out dist-ready --version 0.1.0
 python tools/verify_vpm.py dist-ready
 # A later release for one package preserves all older index entries:
-python tools/build_vpm.py --out dist-ready --package orbit --version 0.1.1
+python tools/build_vpm.py --out dist-ready --package orbit --version 0.1.2
 ```
 
 Each ZIP has a deterministic timestamp and is refused if the same package
@@ -31,8 +31,9 @@ projects that still depend on the legacy package ID.
 
 ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
 project manager to install or update the package versions; the latest unified lilToon
-release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.2`. The generic package
-menus use English, descriptive paths under `Tools/Jeni Tools` (with matching
+release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.2`. Eye Texture Adapter
+and Orbit have `0.1.2` cleanup releases. The generic package menus use English,
+descriptive paths under `Tools/Jeni Tools` (with matching
 `GameObject`, `Assets/Create`, and `Jeni Tools` component roots where applicable).
 
 Register the NDMF, Modular Avatar, lilToon, and other external repositories in each project as needed.
