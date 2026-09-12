@@ -1,0 +1,83 @@
+{
+  "version": "0.1.0",
+  "packages": [
+    {
+      "name": "com.suzuki-y0.jeni.avatar-prefab-material-exporter",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-prefab-material-exporter-0.1.0/com.suzuki-y0.jeni.avatar-prefab-material-exporter-0.1.0.zip",
+      "zipSHA256": "cb5050dbb49da62c95de293e7e7202aa07baac210fd37a8e5991a0c788446168"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-reactive-motion",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.0/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.0.zip",
+      "zipSHA256": "08cb9170d14ae0d39a4ce64a512d4750e205956b84362a81503b5daab77b4893"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-variant-integrator",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.0/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.0.zip",
+      "zipSHA256": "aa7a874ebe7d7e2f1d77d8955c33962796c68245e7b76d965856ec8f5c7c6e61"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-y-offset",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-y-offset-0.1.0/com.suzuki-y0.jeni.avatar-y-offset-0.1.0.zip",
+      "zipSHA256": "867793dc4fb6c6961f604522112160b0c5e0fd912580de3d5f1a46cc236dfbb2"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.cigarette",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.cigarette-0.1.0/com.suzuki-y0.jeni.cigarette-0.1.0.zip",
+      "zipSHA256": "7d0ad4ff2fa1aeb06e2a1c0604436f7d4e14aedecc5e8dbee7e77eb9d7e1c853"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.eye-texture-adapter",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.eye-texture-adapter-0.1.0/com.suzuki-y0.jeni.eye-texture-adapter-0.1.0.zip",
+      "zipSHA256": "21b90e4a4436b0171d9d86cddbc3e5f856d41a3f14647d1b76a637a83489f834"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.face-tracking-blendshape-composer",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.0/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.0.zip",
+      "zipSHA256": "9172297469eedc7c5d7a32bb262d459ec6136b6d6442d3a93fc41299f093b772"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.facetra-prefab-exporter",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.0/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.0.zip",
+      "zipSHA256": "9b7314afd2e96c7c4c8d821030b4922b34b16d1ca6c58e42f1bbf21ecfcd0559"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.liltoon-material-override",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.1.0/com.suzuki-y0.jeni.liltoon-material-override-0.1.0.zip",
+      "zipSHA256": "5ae181e7dfe9d5f142463be8024ab3d97ef78f018a654c95f7fb587b5aab98fe"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.liltoon-preset-applicator",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.0/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.0.zip",
+      "zipSHA256": "aa588e87acf174277346e96e6a21829e3f7e30e380cbb030abbba7d447603d39"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.magic-ray",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.0/com.suzuki-y0.jeni.magic-ray-0.1.0.zip",
+      "zipSHA256": "dad961b7db13a42bf5731155268e731af71e93fed645f55eb096d7f892e1936e"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.mesh-deform-editor",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.mesh-deform-editor-0.1.0/com.suzuki-y0.jeni.mesh-deform-editor-0.1.0.zip",
+      "zipSHA256": "348dd57fa9dbb9ff2c1aafc0167892d393add750b8775132046fe0b4d75c61b5"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.orbit",
+      "version": "0.1.0",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.orbit-0.1.0/com.suzuki-y0.jeni.orbit-0.1.0.zip",
+      "zipSHA256": "c92772e960db9a127f471194257a4d6a3e7783ee2031712317d39770602249e8"
+    }
+  ]
+}
