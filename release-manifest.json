@@ -50,18 +50,6 @@
       "zipSHA256": "9b7314afd2e96c7c4c8d821030b4922b34b16d1ca6c58e42f1bbf21ecfcd0559"
     },
     {
-      "name": "com.suzuki-y0.jeni.liltoon-material-override",
-      "version": "0.1.0",
-      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.1.0/com.suzuki-y0.jeni.liltoon-material-override-0.1.0.zip",
-      "zipSHA256": "5ae181e7dfe9d5f142463be8024ab3d97ef78f018a654c95f7fb587b5aab98fe"
-    },
-    {
-      "name": "com.suzuki-y0.jeni.liltoon-preset-applicator",
-      "version": "0.1.0",
-      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.0/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.0.zip",
-      "zipSHA256": "aa588e87acf174277346e96e6a21829e3f7e30e380cbb030abbba7d447603d39"
-    },
-    {
       "name": "com.suzuki-y0.jeni.magic-ray",
       "version": "0.1.0",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.0/com.suzuki-y0.jeni.magic-ray-0.1.0.zip",
@@ -134,12 +122,6 @@
       "zipSHA256": "2ada3b0d2113e7cdf9443964ab5362b2ac44d0855ec00b576d35fb08cf067cfa"
     },
     {
-      "name": "com.suzuki-y0.jeni.liltoon-preset-applicator",
-      "version": "0.1.1",
-      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.1/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.1.zip",
-      "zipSHA256": "9de39fb779db01ec66559af00010ac81769af00480088ed22f939fb5a2d37363"
-    },
-    {
       "name": "com.suzuki-y0.jeni.magic-ray",
       "version": "0.1.1",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.1/com.suzuki-y0.jeni.magic-ray-0.1.1.zip",
@@ -150,12 +132,6 @@
       "version": "0.1.1",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.orbit-0.1.1/com.suzuki-y0.jeni.orbit-0.1.1.zip",
       "zipSHA256": "d7990f2580a28668523683b7eb9c51cc32b5c8b40ce6a7d00be9f7371c09fc03"
-    },
-    {
-      "name": "com.suzuki-y0.jeni.liltoon-preset-applicator",
-      "version": "0.1.2",
-      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.2/com.suzuki-y0.jeni.liltoon-preset-applicator-0.1.2.zip",
-      "zipSHA256": "270fa4f00559eb1fc7aab2a2ea226cd70e5f8b13dff5bd11d27e124b53d2bcc1"
     },
     {
       "name": "com.suzuki-y0.jeni.liltoon-material-override",

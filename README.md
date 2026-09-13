@@ -3,12 +3,15 @@
 `tools/build_vpm.py` packages the 13 tools currently installed under
 `MCP Project/Assets/Jeni_tool` from the external `VRC_Tools` source of truth.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
+The public index currently publishes 12 package IDs and 25 versions after
+retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
+`liltoon-material-override` `0.1.x` releases.
 
 ```powershell
-python tools/build_vpm.py --out dist-ready --version 0.1.0
-python tools/verify_vpm.py dist-ready
-# A later release for one package preserves all older index entries:
+# Build a release for one non-retired package:
 python tools/build_vpm.py --out dist-ready --package orbit --version 0.1.2
+python tools/verify_vpm.py dist-ready
+# A later release preserves all older non-retired index entries.
 ```
 
 Each ZIP has a deterministic timestamp and is refused if the same package
@@ -16,12 +19,9 @@ version already exists with different bytes. `dist-ready/index.json` is shaped f
 VCC/VPM. The public repository is [jeni-tools-vpm](https://github.com/Suzuki-Y-0/jeni-tools-vpm),
 and its index is available at
 `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
-All 13 generic package IDs are available from that repository. The
-`liltoon-material-override` package has the latest unified `0.2.2` release
+The `liltoon-material-override` package has the latest unified `0.2.2` release
 containing the Preset Applicator sources, so new projects should install that
-one package instead of installing the two lilToon packages side by side. The
-separate `liltoon-preset-applicator` `0.1.x` entries remain available for
-projects that still depend on the legacy package ID.
+one package. Standalone package 10 is retired and has no public index entries.
 
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
@@ -44,12 +44,10 @@ Register the NDMF, Modular Avatar, lilToon, and other external repositories in e
 ## lilToon package 9/10 integration
 
 `com.suzuki-y0.jeni.liltoon-material-override@0.2.2` is the canonical unified
-release. It includes the former `com.suzuki-y0.jeni.liltoon-preset-applicator`
-Runtime and Editor sources under `Legacy/PresetApplicator/` and no longer has
-an internal dependency on that package. Do not add the legacy package 10 to a
-project that already has package 9 `0.2.x`; the separate `0.1.x` package remains
-for compatibility with existing manifests and falls back to its own window when
-the merged package is absent.
+release. It includes the former Preset Applicator Runtime and Editor sources
+under `Legacy/PresetApplicator/` and has no internal dependency on standalone
+package 10. Package 10 is retired and absent from the public index; migrate any
+project that still references that ID to package 9 `0.2.x` before resolving.
 
 The package set deliberately excludes the empty `EyeWobble` folder, legacy
 `FaceTraBlendshapeComposer` documents, generated avatar assets, test fixtures,
@@ -58,8 +56,9 @@ and `URLDisplay` folders that are not present in the MCP project. `Orbit`
 contains the canonical EyeWobble component; `LilToonMaterialOverride` contains
 ProbeAnchorNormalizer.
 
-The initial scope is the 13 generic Jeni tools currently present in MCP
-`Assets/Jeni_tool`; the empty EyeWobble folder is excluded because the current
+The source scope is the 13 generic Jeni tools currently present in MCP
+`Assets/Jeni_tool`; the public index contains 12 package IDs after the package 10
+retirement. The empty EyeWobble folder is excluded because the current
 implementation is in Orbit. Outline, QVPenSigner, URLDisplay, Cazalis and
 CyberTranslucence/CyberpunkTransparentMaterials are separate future work.
 

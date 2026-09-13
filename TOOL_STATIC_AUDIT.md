@@ -1,11 +1,11 @@
-# Jeni Tools 13系統 静的監査報告
+# Jeni Tools 13系統 静的監査報告（公開12 package IDs・25 versions）
 
 監査日: 2026-09-13  
-対象: VRC_Tools を正本とする汎用 Jeni Tools 13 package、公開 VPM index、MCP Project の package コピー
+対象: VRC_Tools を正本とする汎用 Jeni Tools 13 source tools、公開 VPM index（package 10 retirement後の12 IDs・25 versions）、MCP Project の package コピー
 
 ## 監査の境界
 
-この監査は Unity を新規起動せず、ソース、asmdef、package manifest、ZIP、既存の Editor.log、既存テスト計画を照合したものです。対象は次の13 packageです。
+この監査は Unity を新規起動せず、ソース、asmdef、package manifest、ZIP、既存の Editor.log、既存テスト計画を照合したものです。ソース対象は13系統で、公開 VPM package は package 10 のretirement後に12 IDsです。
 
 1. Avatar Prefab Material Exporter
 2. Avatar Reactive Motion
@@ -16,7 +16,7 @@
 7. Face Tracking Blendshape Composer
 8. FaceTra Prefab Exporter
 9. lilToon Material Override
-10. lilToon Preset Applicator（旧 package ID。9へ統合済み）
+10. lilToon Preset Applicator（旧 package ID。standalone package 10はretired、9へ統合済み）
 11. Magic Ray Gimmick Builder
 12. Mesh Deform Editor
 13. Orbit Asset Generator（Eye Wobbleを含む）
@@ -36,7 +36,7 @@
 | face-tracking-blendshape-composer | 0.1.1 | NDMF | 3 | Composer、template、Installer認識の構造を確認 | VRCFT/FaceTra実ベイク、NDMF、実機 |
 | facetra-prefab-exporter | 0.1.1 | NDMF、VRChat SDK、Face Tracking Composer | 4 | FaceTra key、source signature、Installerの失敗停止を確認 | 別FaceTra版・別Mesh・実ベイク |
 | liltoon-material-override | 0.2.2 | NDMF、Modular Avatar、VRChat SDK、lilToon | 5 | Preset Applicator、Probe Anchor、Outlineを9へ同梱。0.2.xは旧10への依存なし | 各lilToon版、Preview、後続MA/Optimizer、Quest |
-| liltoon-preset-applicator（legacy） | 0.1.2 | NDMF、VRChat SDK、lilToon | 1 | 9が無い単独導入向けfallbackを確認 | 9と同時導入しないこと。既存移行を確認 |
+| liltoon-preset-applicator（retired package 10） | — | NDMF、VRChat SDK、lilToon | 1 | standalone package 10は公開対象外。Runtime/Editorは9の0.2.xへ統合済み | 既存プロジェクトのpackage 9 `0.2.x` 移行 |
 | magic-ray | 0.1.1 | NDMF、Modular Avatar、VRChat SDK | 1 | Build-onlyのparameter/menu衝突検査、clone内解決を確認 | PC/Quest音、Bloom、負荷、MA API差異 |
 | mesh-deform-editor | 0.1.0 | Unity Editor | 1 | package時にEditor asmdef overlayを生成。ソース単体にはasmdefなし | Mesh保存、Shader、Undo/Redo、大頂点数 |
 | orbit | 0.1.2 | NDMF、Modular Avatar、VRChat SDK | 4 | Orbit/Eye Wobble統合、固定生成先、未使用legacy field整理を確認 | Scene Preview、clip、Menu/Parameter、scale |
@@ -45,26 +45,26 @@
 
 ## 検証で得られた証拠
 
-- python -m unittest discover -s VRC_Tools/PersonalVpm/tests -v: 8 tests passed。
+- python -m unittest discover -s VRC_Tools/PersonalVpm/tests -v: 9 tests passed。
 - python -m py_compile VRC_Tools/PersonalVpm/tools/build_vpm.py VRC_Tools/PersonalVpm/tools/verify_vpm.py: 成功。
-- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 29 package versions。
-- MCPのパスを意図的に存在しない場所へ切り替えた一時buildでも13 packageすべてを生成でき、metadata snapshot/fallbackで自己完結することを確認しました。最新buildのfallback数は順に、3 / 8 / 30 / 8 / 2 / 28 / 16 / 9 / 9 / 8 / 7 / 6 / 9です。
+- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 25 package versions。
+- MCPのパスを意図的に存在しない場所へ切り替えた一時buildでも12公開 packageすべてを生成でき、metadata snapshot/fallbackで自己完結することを確認しました。最新buildのfallback数は順に、3 / 8 / 30 / 8 / 2 / 28 / 16 / 9 / 9 / 7 / 6 / 9です（retired package 10を除く）。
 - 最新ZIPはunsafe path、.git、開発用 Tests / Generated / Archive、package.jsonと無関係な孤立 .md.meta を含みません。各ZIP内のGUID重複も0件です。
-- 公開indexはHTTP 200で取得でき、13 package ID・29 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはindexのSHA-256と一致します。
+- 公開indexはHTTP 200で取得でき、12 package ID・25 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはindexのSHA-256と一致します。
 - 現在のMCP Projectでは、MCP manifestのJeni package 12件を vpm-manifest.json に記録し、Eye Texture Adapter / Orbitのpackage manifestとREADMEも最新版へ揃えました。旧 Assets/Jeni_tool 側は EyeWobble.meta だけで、JeniのC#コピーはPackages側です。
 
 ## 発見事項
 
-### F-001 — package 9/10の同時導入はアセンブリ・GUID・メニューが衝突する（P1）
+### F-001 — package 9/10の同時導入はアセンブリ・GUID・メニューが衝突する（解決済み、P1）
 
-liltoon-material-override 0.2.2 は旧10のソースを Legacy/PresetApplicator/ に同梱しています。旧 liltoon-preset-applicator 0.1.2 と同時に入れると、次のasmdef名が重複します。
+liltoon-material-override 0.2.2 は旧10のソースを Legacy/PresetApplicator/ に同梱しています。旧 liltoon-preset-applicator 0.1.2 と同時に入れると、次のasmdef名が重複します（この組み合わせはretirement前の状態です）。
 
 - JeniTool.LilToonPresetApplicator.Editor
 - JeniTool.LilToonPresetApplicator.Runtime
 
-同じソースを共有するため、7個のUnity GUIDも重複し、Apply Preset Configuration メニューも二重登録されます。現在の公開READMEは「新規導入は9の0.2.xだけ」「旧10は既存manifest互換用」と明記しています。これは暫定的な運用であり、VCCで両方を選べる状態そのものは事故要因です。
+同じソースを共有するため、7個のUnity GUIDも重複し、Apply Preset Configuration メニューも二重登録されます。package 10 standaloneとpackage 9の`0.1.x`は公開 indexから削除し、package 9の`0.2.x`だけを公開することで、VCCで衝突する組み合わせを選べない状態にしました。
 
-対策は、旧10を新規公開対象からdeprecated扱いにし、9の次のbreaking releaseでlegacy assembly名または移行方法を明確化することです。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIも追加します。
+対策は完了しました。公開 indexの12 IDs・25 versionsを検証し、package 10の公開artifact・index entryが無いことを確認しました。package 10を参照する既存プロジェクトにはpackage 9 `0.2.x`への移行を案内します。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIは継続します。
 
 ### F-002 — ソースリポジトリの .meta 不足をsnapshotで補っている（P1）
 
@@ -127,7 +127,7 @@ VRChat Schoolの手順に合わせ、次の順序で受入れを行います。
 
 ### Phase 0 — 今回完了した静的・配布整備
 
-1. 13 packageのメニューを英語の機能名へ統一し、9/10統合方針をREADMEとindexへ反映。
+1. 13 source toolsのメニューを英語の機能名へ統一し、9/10統合方針とpackage 10 retirementをREADMEとindexへ反映。
 2. Orbit/Eyeの警告とパス・リンク不整合を修正し、0.1.2 patch releaseを公開。
 3. MCP ProjectのEye/Orbit package manifest、README、vpm-manifest.jsonを公開最新へ同期。
 4. ZIP、index、SHA-256、GUID、asmdef、メニュー、決定性テストを再実行。
@@ -135,7 +135,7 @@ VRChat Schoolの手順に合わせ、次の順序で受入れを行います。
 ### Phase 1 — release CIの不足を埋める
 
 1. source file、sidecar、metadata snapshotのcoverageとGUID driftを必須チェックにする。
-2. 全latest packageを横断してasmdef名、GUID、MenuItemの衝突を検査する。package9/10の既知互換例は警告ではなくdeprecated policyとして扱う。
+2. 全latest packageを横断してasmdef名、GUID、MenuItemの衝突を検査する。retired package 10は公開衝突matrixから除外し、source側の重複検査は継続する。
 3. package.jsonの依存範囲、asmdef参照、READMEの版表示、公開index/Release assetのSHAを一つの検証結果へまとめる。
 4. Mesh Deform overlayを単独packageとしてcompileできる静的fixtureを追加する。
 
@@ -156,7 +156,7 @@ VRChat Schoolの手順に合わせ、次の順序で受入れを行います。
 ### Phase 5 — 配布ガバナンス
 
 1. patchは警告・文書・後方互換修正、minorは機能追加、majorはassembly/GUID/生成物移行を伴う変更と定義します。
-2. package 10はlegacy/deprecated表示を追加し、9の次期breaking releaseへ移行ガイドと自動検出を用意します。
-3. 毎回、公開前にclean VCC projectへindexを登録し、13 packageのうち必要な組み合わせだけを追加してresolve・compile・Buildを確認します。
+2. package 10はretired状態を維持し、これを参照する既存プロジェクト向けにpackage 9 `0.2.x`への移行ガイドと自動検出を用意します。
+3. 毎回、公開前にclean VCC projectへindexを登録し、12 published package IDs（13 source tools）のうち必要な組み合わせだけを追加してresolve・compile・Buildを確認します。
 
 この文書の「静的判定」は、Unity Editor、NDMF、VRChat実機の合格を意味しません。Unity受入れが終わるまで、各toolの未検証範囲は NOT VERIFIED / NOT RUN のまま扱います。
