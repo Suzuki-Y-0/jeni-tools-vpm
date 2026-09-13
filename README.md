@@ -48,6 +48,10 @@ release. It includes the former Preset Applicator Runtime and Editor sources
 under `Legacy/PresetApplicator/` and has no internal dependency on standalone
 package 10. Package 10 is retired and absent from the public index; migrate any
 project that still references that ID to package 9 `0.2.x` before resolving.
+The `Legacy/PresetApplicator/` directory and its historical assembly namespace
+are internal contents of package 9, not a second installed package. The
+`VRC_Tools/LilToonPresetApplicator` source folder is retained only as build input
+for that merged release and is never published as package 10.
 
 The package set deliberately excludes the empty `EyeWobble` folder, legacy
 `FaceTraBlendshapeComposer` documents, generated avatar assets, test fixtures,
