@@ -3,13 +3,13 @@
 `tools/build_vpm.py` packages the 13 tools currently installed under
 `MCP Project/Assets/Jeni_tool` from the external `VRC_Tools` source of truth.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 25 versions after
+The public index currently publishes 12 package IDs and 26 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
 ```powershell
 # Build a release for one non-retired package:
-python tools/build_vpm.py --out dist-ready --package orbit --version 0.1.2
+python tools/build_vpm.py --out dist-ready --package orbit --version 0.2.0
 python tools/verify_vpm.py dist-ready
 # A later release preserves all older non-retired index entries.
 ```
@@ -35,7 +35,8 @@ The source-side static audit and staged Unity acceptance plan are documented in
 ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
 project manager to install or update the package versions; the latest unified lilToon
 release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.2`. Eye Texture Adapter
-and Orbit have `0.1.2` cleanup releases. The generic package menus use English,
+has a `0.1.2` cleanup release; Orbit's `0.2.0` release contains only the Orbit
+Asset Generator after Eye Wobble moved to Avatar Reactive Motion. The generic package menus use English,
 descriptive paths under `Tools/Jeni Tools` (with matching
 `GameObject`, `Assets/Create`, and `Jeni Tools` component roots where applicable).
 
@@ -57,13 +58,14 @@ The package set deliberately excludes the empty `EyeWobble` folder, legacy
 `FaceTraBlendshapeComposer` documents, generated avatar assets, test fixtures,
 archives, nested `.git` directories, and the source-only `Outline`, `QVPenSigner`
 and `URLDisplay` folders that are not present in the MCP project. `Orbit`
-contains the canonical EyeWobble component; `LilToonMaterialOverride` contains
+contains only the Orbit Asset Generator; Avatar Reactive Motion owns the
+canonical Eye Wobble component. `LilToonMaterialOverride` contains
 ProbeAnchorNormalizer.
 
 The source scope is the 13 generic Jeni tools currently present in MCP
 `Assets/Jeni_tool`; the public index contains 12 package IDs after the package 10
-retirement. The empty EyeWobble folder is excluded because the current
-implementation is in Orbit. Outline, QVPenSigner, URLDisplay, Cazalis and
+retirement. The empty EyeWobble folder is excluded because the canonical
+implementation is in Avatar Reactive Motion. Outline, QVPenSigner, URLDisplay, Cazalis and
 CyberTranslucence/CyberpunkTransparentMaterials are separate future work.
 
 Before switching an existing project, back up and remove its old

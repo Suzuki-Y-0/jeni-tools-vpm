@@ -480,6 +480,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.orbit-0.1.2/com.suzuki-y0.jeni.orbit-0.1.2.zip",
           "zipSHA256": "41785b4f76ae96b60a69e15f2b2209142443659249dcbeb2053aa4ae926978f6"
+        },
+        "0.2.0": {
+          "name": "com.suzuki-y0.jeni.orbit",
+          "displayName": "Orbit Asset Generator",
+          "version": "0.2.0",
+          "description": "Jeni Tools - Orbit Asset Generator.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0",
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.orbit-0.2.0/com.suzuki-y0.jeni.orbit-0.2.0.zip",
+          "zipSHA256": "1105c4489a8f3b49b17419d476ad7a1cbecd0cf100ebb6c5200779a5a235a7b1"
         }
       }
     }

@@ -1,7 +1,7 @@
-# Jeni Tools 13系統 静的監査報告（公開12 package IDs・25 versions）
+# Jeni Tools 13系統 静的監査報告（公開12 package IDs・26 versions）
 
 監査日: 2026-09-13  
-対象: VRC_Tools を正本とする汎用 Jeni Tools 13 source tools、公開 VPM index（package 10 retirement後の12 IDs・25 versions）、MCP Project の package コピー
+対象: VRC_Tools を正本とする汎用 Jeni Tools 13 source tools、公開 VPM index（package 10 retirement後の12 IDs・26 versions）、MCP Project の package コピー
 
 ## 監査の境界
 
@@ -19,7 +19,7 @@
 10. lilToon Preset Applicator（旧 package ID。standalone package 10はretired、9へ統合済み）
 11. Magic Ray Gimmick Builder
 12. Mesh Deform Editor
-13. Orbit Asset Generator（Eye Wobbleを含む）
+13. Orbit Asset Generator（Eye Wobbleなし。Eye WobbleはAvatar Reactive Motion）
 
 ソース全体の [MenuItem] / [AddComponentMenu] は33件、空でない表示パスは27件でした。汎用メニューはASCII英語で、許可したルート（Tools/Jeni Tools、GameObject/Jeni Tools、Assets/Create/Jeni Tools、Jeni Tools）から外れる項目は0件でした。MCP Projectの現在のpackageコピーでも33件を読み取れ、非ASCIIのメニュー表示は0件です。空の AddComponentMenu("") はInspectorでコンポーネントを追加する経路を公開しない既存設計であり、名前漏れとは判定していません。
 
@@ -39,19 +39,19 @@
 | liltoon-preset-applicator（retired package 10） | — | NDMF、VRChat SDK、lilToon | 1 | standalone package 10は公開対象外。Runtime/Editorは9の0.2.xへ統合済み | 既存プロジェクトのpackage 9 `0.2.x` 移行 |
 | magic-ray | 0.1.1 | NDMF、Modular Avatar、VRChat SDK | 1 | Build-onlyのparameter/menu衝突検査、clone内解決を確認 | PC/Quest音、Bloom、負荷、MA API差異 |
 | mesh-deform-editor | 0.1.0 | Unity Editor | 1 | package時にEditor asmdef overlayを生成。ソース単体にはasmdefなし | Mesh保存、Shader、Undo/Redo、大頂点数 |
-| orbit | 0.1.2 | NDMF、Modular Avatar、VRChat SDK | 4 | Orbit/Eye Wobble統合、固定生成先、未使用legacy field整理を確認 | Scene Preview、clip、Menu/Parameter、scale |
+| orbit | 0.2.0 | NDMF、Modular Avatar、VRChat SDK | 2 | Orbit Asset Generatorのみ、固定生成先、未使用legacy field整理を確認。Eye WobbleはAvatar Reactive Motionへ分離 | Scene Preview、clip、Menu/Parameter、scale |
 
 メニュー名は機能を示す動詞を含めました（Create、Transfer ... and Export PNG、Normalize ... (Build Time)、Generate ...）。ブランド表記の lilToon と FaceTra はAPI・製品名として保持しています。
 
 ## 検証で得られた証拠
 
-- python -m unittest discover -s VRC_Tools/PersonalVpm/tests -v: 9 tests passed。
+- python -m unittest discover -s VRC_Tools/PersonalVpm/tests -v: 11 tests passed。
 - python -m py_compile VRC_Tools/PersonalVpm/tools/build_vpm.py VRC_Tools/PersonalVpm/tools/verify_vpm.py: 成功。
-- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 25 package versions。
+- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 26 package versions。
 - MCPのパスを意図的に存在しない場所へ切り替えた一時buildでも12公開 packageすべてを生成でき、metadata snapshot/fallbackで自己完結することを確認しました。最新buildのfallback数は順に、3 / 8 / 30 / 8 / 2 / 28 / 16 / 9 / 9 / 7 / 6 / 9です（retired package 10を除く）。
 - 最新ZIPはunsafe path、.git、開発用 Tests / Generated / Archive、package.jsonと無関係な孤立 .md.meta を含みません。各ZIP内のGUID重複も0件です。
-- 公開indexはHTTP 200で取得でき、12 package ID・25 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはindexのSHA-256と一致します。
-- 現在のMCP Projectでは、MCP manifestのJeni package 12件を vpm-manifest.json に記録し、Eye Texture Adapter / Orbitのpackage manifestとREADMEも最新版へ揃えました。旧 Assets/Jeni_tool 側は EyeWobble.meta だけで、JeniのC#コピーはPackages側です。
+- 公開indexはHTTP 200で取得でき、12 package ID・26 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはimmutableな既存版として保持します。Orbit 0.2.0はEye Wobble分離版です。
+- 現在のMCP Projectでは、MCP manifestのJeni package 12件を vpm-manifest.json に記録し、Eye Texture Adapter / Orbitのpackage manifestとREADMEも最新版へ揃えました。Orbit packageはOrbit Asset Generatorだけを含み、Eye WobbleはAvatar Reactive Motionが所有します。
 
 ## 発見事項
 
@@ -64,7 +64,7 @@ liltoon-material-override 0.2.2 は旧10のソースを Legacy/PresetApplicator/
 
 同じソースを共有するため、7個のUnity GUIDも重複し、Apply Preset Configuration メニューも二重登録されます。package 10 standaloneとpackage 9の`0.1.x`は公開 indexから削除し、package 9の`0.2.x`だけを公開することで、VCCで衝突する組み合わせを選べない状態にしました。
 
-対策は完了しました。公開 indexの12 IDs・25 versionsを検証し、package 10の公開artifact・index entryが無いことを確認しました。package 10を参照する既存プロジェクトにはpackage 9 `0.2.x`への移行を案内します。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIは継続します。
+対策は完了しました。公開 indexの12 IDs・26 versionsを検証し、package 10の公開artifact・index entryが無いことを確認しました。package 10を参照する既存プロジェクトにはpackage 9 `0.2.x`への移行を案内します。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIは継続します。
 
 ### F-002 — ソースリポジトリの .meta 不足をsnapshotで補っている（P1）
 
@@ -74,7 +74,7 @@ liltoon-material-override 0.2.2 は旧10のソースを Legacy/PresetApplicator/
 
 ### F-003 — Orbitの未使用legacy field（解決済み、P2）
 
-OrbitAssetGenerator.outputFolder は ORBIT_LEGACY_GENERATOR が無効な現行経路では読み書きされず、CS0414警告になっていました。現行生成先は意図的に Assets/Jeni_tool/Orbit/Generated 固定なので、field宣言をlegacy define内へ移し、動作・シリアライズ面を変えずに orbit 0.1.2 を再公開しました。
+OrbitAssetGenerator.outputFolder は ORBIT_LEGACY_GENERATOR が無効な現行経路では読み書きされず、CS0414警告になっていました。現行生成先は意図的に Assets/Jeni_tool/Orbit/Generated 固定なので、field宣言をlegacy define内へ移し、動作・シリアライズ面を変えました。Eye Wobble分離に伴うOrbit 0.2.0では、この修正版Orbit実装だけを出荷し、既存Orbit 0.1.2はimmutableに保持します。
 
 ### F-004 — Eye Profile Wizardの到達不能分岐（解決済み、P2）
 
@@ -128,8 +128,8 @@ VRChat Schoolの手順に合わせ、次の順序で受入れを行います。
 ### Phase 0 — 今回完了した静的・配布整備
 
 1. 13 source toolsのメニューを英語の機能名へ統一し、9/10統合方針とpackage 10 retirementをREADMEとindexへ反映。
-2. Orbit/Eyeの警告とパス・リンク不整合を修正し、0.1.2 patch releaseを公開。
-3. MCP ProjectのEye/Orbit package manifest、README、vpm-manifest.jsonを公開最新へ同期。
+2. Orbit/Eyeの警告とパス・リンク不整合を修正し、Orbit 0.2.0でEye WobbleをAvatar Reactive Motionへ分離（公開済みOrbit 0.1.2はimmutable保持）。
+3. MCP ProjectのEye/Orbit package manifest、README、vpm-manifest.jsonをOrbit 0.2.0へ同期。
 4. ZIP、index、SHA-256、GUID、asmdef、メニュー、決定性テストを再実行。
 
 ### Phase 1 — release CIの不足を埋める
