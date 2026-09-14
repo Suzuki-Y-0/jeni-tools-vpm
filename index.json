@@ -383,6 +383,25 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.3/com.suzuki-y0.jeni.liltoon-material-override-0.2.3.zip",
           "zipSHA256": "dd2fed68268b91e30018a516adadef327b78c8769fd9ceef58ca30b644ea2b12"
+        },
+        "0.2.4": {
+          "name": "com.suzuki-y0.jeni.liltoon-material-override",
+          "displayName": "lilToon Material Override (Probe Anchor included)",
+          "version": "0.2.4",
+          "description": "Jeni Tools - lilToon Material Override (Probe Anchor included).",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "jp.lilxyzw.liltoon": ">=2.3.4 <3.0.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.4/com.suzuki-y0.jeni.liltoon-material-override-0.2.4.zip",
+          "zipSHA256": "e15bcd5185f0e01f8623c74c4a5361b0e400417ebfafb8a18ce4d8e3624945c0"
         }
       }
     },

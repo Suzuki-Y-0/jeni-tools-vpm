@@ -3,7 +3,7 @@
 `tools/build_vpm.py` packages the 13 tools currently installed under
 `MCP Project/Assets/Jeni_tool` from the external `VRC_Tools` source of truth.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 27 versions after
+The public index currently publishes 12 package IDs and 28 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
@@ -19,10 +19,10 @@ version already exists with different bytes. `dist-ready/index.json` is shaped f
 VCC/VPM. The public repository is [jeni-tools-vpm](https://github.com/Suzuki-Y-0/jeni-tools-vpm),
 and its index is available at
 `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
-The `liltoon-material-override` package has the latest unified `0.2.3` release
+The `liltoon-material-override` package has the latest unified `0.2.4` release
 containing the Preset Applicator sources, so new projects should install that
-one package. Version `0.2.3` also runs a lilToon package preflight before Scene
-Preview and reports missing 2.3.4 API markers before creating temporary materials.
+one package. Version `0.2.4` also runs a lilToon package preflight before Scene
+Preview and reports mixed-generation 2.3.4 API markers before creating temporary materials.
 Standalone package 10 is retired and has no public index entries.
 
 The source-side static audit and staged Unity acceptance plan are documented in
@@ -36,7 +36,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
 project manager to install or update the package versions; the latest unified lilToon
-release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.3`. Eye Texture Adapter
+release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.4`. Eye Texture Adapter
 has a `0.1.2` cleanup release; Orbit's `0.2.0` release contains only the Orbit
 Asset Generator after Eye Wobble moved to Avatar Reactive Motion. The generic package menus use English,
 descriptive paths under `Tools/Jeni Tools` (with matching
@@ -46,7 +46,7 @@ Register the NDMF, Modular Avatar, lilToon, and other external repositories in e
 
 ## lilToon package 9/10 integration
 
-`com.suzuki-y0.jeni.liltoon-material-override@0.2.3` is the canonical unified
+`com.suzuki-y0.jeni.liltoon-material-override@0.2.4` is the canonical unified
 release. It includes the former Preset Applicator Runtime and Editor sources
 under `Legacy/PresetApplicator/` and has no internal dependency on standalone
 package 10. Package 10 is retired and absent from the public index; migrate any
