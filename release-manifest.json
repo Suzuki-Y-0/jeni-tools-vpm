@@ -1,5 +1,5 @@
 {
-  "version": "0.2.4",
+  "version": "0.2.5",
   "packages": [
     {
       "name": "com.suzuki-y0.jeni.avatar-prefab-material-exporter",
@@ -168,6 +168,12 @@
       "version": "0.2.4",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.4/com.suzuki-y0.jeni.liltoon-material-override-0.2.4.zip",
       "zipSHA256": "e15bcd5185f0e01f8623c74c4a5361b0e400417ebfafb8a18ce4d8e3624945c0"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.liltoon-material-override",
+      "version": "0.2.5",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.5/com.suzuki-y0.jeni.liltoon-material-override-0.2.5.zip",
+      "zipSHA256": "e1f570f87be980c402dec727a1a307d8ca066a75c7daee34d50c6a3021453c26"
     }
   ]
 }

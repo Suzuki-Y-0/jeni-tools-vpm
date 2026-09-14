@@ -1,11 +1,11 @@
-# Jeni Tools 13系統 静的監査報告（公開12 package IDs・28 versions）
+# Jeni Tools 13系統 静的監査報告（公開12 package IDs・29 versions）
 
 監査日: 2026-09-13  
-対象: VRC_Tools を正本とする汎用 Jeni Tools 13 source tools、公開 VPM index（package 10 retirement後の12 IDs・28 versions）、MCP Project の package コピー
+対象: VRC_Tools を正本とする汎用 Jeni Tools 13 source tools、公開 VPM index（package 10 retirement後の12 IDs・29 versions）、MCP Project の package コピー
 
 ## 監査の境界
 
-この監査は Unity を新規起動せず、ソース、asmdef、package manifest、ZIP、既存の Editor.log、既存テスト計画を照合したものです。ソース対象は13系統で、公開 VPM package は package 10 のretirement後に12 IDsです。lilToon Material Override 0.2.4では、Preview開始前にlilToon 2.3.4のpackage/API markerを検査するPreflightを追加しています。
+この監査は Unity を新規起動せず、ソース、asmdef、package manifest、ZIP、既存の Editor.log、既存テスト計画を照合したものです。ソース対象は13系統で、公開 VPM package は package 10 のretirement後に12 IDsです。lilToon Material Override 0.2.5では、Preview開始前にlilToon 2.3.4のpackage/API markerを自動検査し、利用者向けPreflightメニューは露出していません。
 
 1. Avatar Prefab Material Exporter
 2. Avatar Reactive Motion
@@ -35,7 +35,7 @@
 | eye-texture-adapter | 0.1.2 | NDMF | 2 | Profile/PNGの保存経路、sidecar、到達不能分岐除去を確認 | GPU画像、4096/8192、Gamma、実アバターBuild |
 | face-tracking-blendshape-composer | 0.1.1 | NDMF | 3 | Composer、template、Installer認識の構造を確認 | VRCFT/FaceTra実ベイク、NDMF、実機 |
 | facetra-prefab-exporter | 0.1.1 | NDMF、VRChat SDK、Face Tracking Composer | 4 | FaceTra key、source signature、Installerの失敗停止を確認 | 別FaceTra版・別Mesh・実ベイク |
-| liltoon-material-override | 0.2.4 | NDMF、Modular Avatar、VRChat SDK、lilToon | 5 | Preset Applicator、Probe Anchor、Outlineを9へ同梱。Preview前にlilToon 2.3.4 split/API markerをPreflight。0.2.xは旧10への依存なし | 各lilToon版、Preview、後続MA/Optimizer、Quest |
+| liltoon-material-override | 0.2.5 | NDMF、Modular Avatar、VRChat SDK、lilToon | 5 | Preset Applicator、Probe Anchor、Outlineを9へ同梱。Preview前にlilToon 2.3.4 split/API markerを自動検査。UIの入口と適用方法を整理。0.2.xは旧10への依存なし | 各lilToon版、Preview、後続MA/Optimizer、Quest |
 | liltoon-preset-applicator（retired package 10） | — | NDMF、VRChat SDK、lilToon | 1 | standalone package 10は公開対象外。Runtime/Editorは9の0.2.xへ統合済み | 既存プロジェクトのpackage 9 `0.2.x` 移行 |
 | magic-ray | 0.1.1 | NDMF、Modular Avatar、VRChat SDK | 1 | Build-onlyのparameter/menu衝突検査、clone内解決を確認 | PC/Quest音、Bloom、負荷、MA API差異 |
 | mesh-deform-editor | 0.1.0 | Unity Editor | 1 | package時にEditor asmdef overlayを生成。ソース単体にはasmdefなし | Mesh保存、Shader、Undo/Redo、大頂点数 |
@@ -47,24 +47,24 @@
 
 - python -m unittest discover -s VRC_Tools/PersonalVpm/tests -v: 11 tests passed。
 - python -m py_compile VRC_Tools/PersonalVpm/tools/build_vpm.py VRC_Tools/PersonalVpm/tools/verify_vpm.py: 成功。
-- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 27 package versions。
+- python VRC_Tools/PersonalVpm/tools/verify_vpm.py VRC_Tools/PersonalVpm/dist-ready: verified 29 package versions。
 - MCPのパスを意図的に存在しない場所へ切り替えた一時buildでも12公開 packageすべてを生成でき、metadata snapshot/fallbackで自己完結することを確認しました。最新buildのfallback数は順に、3 / 8 / 30 / 8 / 2 / 28 / 16 / 9 / 9 / 7 / 6 / 9です（retired package 10を除く）。
 - 最新ZIPはunsafe path、.git、開発用 Tests / Generated / Archive、package.jsonと無関係な孤立 .md.meta を含みません。各ZIP内のGUID重複も0件です。
-- 公開indexはHTTP 200で取得でき、12 package ID・28 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはimmutableな既存版として保持します。Orbit 0.2.0はEye Wobble分離版です。lilToon Material Override 0.2.4はPreflight/API marker検査を収録します。
+- 公開indexはHTTP 200で取得でき、12 package ID・29 versionを保持しています。Eye Texture Adapter 0.1.2 と Orbit 0.1.2 のRelease assetはimmutableな既存版として保持します。Orbit 0.2.0はEye Wobble分離版です。lilToon Material Override 0.2.5はUI整理とPreflight/API marker自動検査を収録します。
 - 現在のMCP Projectでは、MCP manifestのJeni package 12件を vpm-manifest.json に記録し、Eye Texture Adapter / Orbitのpackage manifestとREADMEも最新版へ揃えました。Orbit packageはOrbit Asset Generatorだけを含み、Eye WobbleはAvatar Reactive Motionが所有します。
 
 ## 発見事項
 
 ### F-001 — package 9/10の同時導入はアセンブリ・GUID・メニューが衝突する（解決済み、P1）
 
-liltoon-material-override 0.2.4 は旧10のソースを Legacy/PresetApplicator/ に同梱し、Preview開始前のlilToon 2.3.4 package/API marker検査を行います。旧 liltoon-preset-applicator 0.1.2 と同時に入れると、次のasmdef名が重複します（この組み合わせはretirement前の状態です）。
+liltoon-material-override 0.2.5 は旧10のソースを Legacy/PresetApplicator/ に同梱し、Preview開始前のlilToon 2.3.4 package/API marker検査を行います。旧 liltoon-preset-applicator 0.1.2 と同時に入れると、次のasmdef名が重複します（この組み合わせはretirement前の状態です）。
 
 - JeniTool.LilToonPresetApplicator.Editor
 - JeniTool.LilToonPresetApplicator.Runtime
 
 同じソースを共有するため、7個のUnity GUIDも重複し、Apply Preset Configuration メニューも二重登録されます。package 10 standaloneとpackage 9の`0.1.x`は公開 indexから削除し、package 9の`0.2.x`だけを公開することで、VCCで衝突する組み合わせを選べない状態にしました。
 
-対策は完了しました。公開 indexの12 IDs・28 versionsを検証し、package 10の公開artifact・index entryが無いことを確認しました。package 10を参照する既存プロジェクトにはpackage 9 `0.2.x`への移行を案内します。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIは継続します。
+対策は完了しました。公開 indexの12 IDs・29 versionsを検証し、package 10の公開artifact・index entryが無いことを確認しました。package 10を参照する既存プロジェクトにはpackage 9 `0.2.x`への移行を案内します。ビルド時に複数packageのasmdef名・GUID・MenuItemを横断検査するCIは継続します。
 
 ### F-002 — ソースリポジトリの .meta 不足をsnapshotで補っている（P1）
 
