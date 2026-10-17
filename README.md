@@ -3,7 +3,7 @@
 `tools/build_vpm.py` packages the 13 tools currently installed under
 `MCP Project/Assets/Jeni_tool` from the external `VRC_Tools` source of truth.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 47 versions after
+The public index currently publishes 12 package IDs and 52 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
@@ -19,7 +19,7 @@ version already exists with different bytes. `dist-ready/index.json` is shaped f
 VCC/VPM. The public repository is [jeni-tools-vpm](https://github.com/Suzuki-Y-0/jeni-tools-vpm),
 and its index is available at
 `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
-The `liltoon-material-override` package has the latest unified `0.2.8` release
+The `liltoon-material-override` package has the latest unified `0.2.9` release
 containing the Preset Applicator sources, so new projects should install that
 one package. Version `0.2.6` also clarifies the single Material Override entry,
 makes Preset optional in the creation window, and explains that Build-only saves
@@ -30,7 +30,14 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Latest UI release (2026-10-17)
+## Latest UI release (2026-10-18)
+
+`avatar-y-offset@0.1.3`, `liltoon-material-override@0.2.9`, `magic-ray@0.1.4`, `orbit@0.2.2`, and
+`avatar-variant-integrator@0.1.4`. The windows now fill the avatar from the current selection, Magic Ray
+and Orbit fold optional settings by default, and Avatar Variant Integrator shows the next step and can set
+the canonical avatar from the avatar's own prefab.
+
+## UI release (2026-10-17)
 
 `facetra-prefab-exporter@0.1.3`, `avatar-variant-integrator@0.1.3`, `avatar-y-offset@0.1.2`,
 `liltoon-material-override@0.2.8`, and `magic-ray@0.1.3`. FaceTra Prefab Exporter now accepts baked
@@ -58,7 +65,7 @@ after an editor restart.
 
 ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
 project manager to install or update the package versions; the latest unified lilToon
-release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.8`. Eye Texture Adapter
+release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.9`. Eye Texture Adapter
 has a `0.1.2` cleanup release; Orbit's `0.2.0` release contains only the Orbit
 Asset Generator after Eye Wobble moved to Avatar Reactive Motion. The generic package menus use English,
 descriptive paths under `Tools/Jeni Tools` (with matching
@@ -68,7 +75,7 @@ Register the NDMF, Modular Avatar, lilToon, and other external repositories in e
 
 ## lilToon package 9/10 integration
 
-`com.suzuki-y0.jeni.liltoon-material-override@0.2.8` is the canonical unified
+`com.suzuki-y0.jeni.liltoon-material-override@0.2.9` is the canonical unified
 release. It includes the former Preset Applicator Runtime and Editor sources
 under `Legacy/PresetApplicator/` and has no internal dependency on standalone
 package 10. Package 10 is retired and absent from the public index; migrate any
