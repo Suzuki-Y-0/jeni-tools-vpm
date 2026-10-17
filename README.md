@@ -4,7 +4,7 @@
 The verification copies live in `MCP Project/Packages/com.suzuki-y0.jeni.*`; missing `.meta` GUIDs
 are taken from there or from `metadata/`.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 56 versions after
+The public index currently publishes 12 package IDs and 60 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
@@ -20,7 +20,7 @@ version already exists with different bytes. `dist-ready/index.json` is shaped f
 VCC/VPM. The public repository is [jeni-tools-vpm](https://github.com/Suzuki-Y-0/jeni-tools-vpm),
 and its index is available at
 `https://raw.githubusercontent.com/Suzuki-Y-0/jeni-tools-vpm/main/index.json`.
-The `liltoon-material-override` package has the latest unified `0.2.10` release
+The `liltoon-material-override` package has the latest unified `0.2.11` release
 containing the Preset Applicator sources, so new projects should install that
 one package. Version `0.2.6` also clarifies the single Material Override entry,
 makes Preset optional in the creation window, and explains that Build-only saves
@@ -31,25 +31,29 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Current versions (2026-10-18)
+## Current versions (2026-10-18, third batch)
 
 | Package | Latest |
 |---|---|
 | avatar-prefab-material-exporter | 0.1.2 |
-| avatar-reactive-motion | 0.1.2 |
+| avatar-reactive-motion | 0.1.3 |
 | avatar-variant-integrator | 0.1.4 |
-| avatar-y-offset | 0.1.4 |
+| avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
 | eye-texture-adapter | 0.1.3 |
 | face-tracking-blendshape-composer | 0.1.2 |
 | facetra-prefab-exporter | 0.1.3 |
-| liltoon-material-override | 0.2.10 |
+| liltoon-material-override | 0.2.11 |
 | magic-ray | 0.1.5 |
 | mesh-deform-editor | 0.1.1 |
-| orbit | 0.2.3 |
+| orbit | 0.2.4 |
 
 ## Release notes
 
+- **2026-10-18 (third batch):** `avatar-y-offset@0.1.5`, `liltoon-material-override@0.2.11`,
+  `orbit@0.2.4`, `avatar-reactive-motion@0.1.3`. Windows create and Inspectors adjust: each screen says so,
+  windows can open existing configurations, and Avatar Y Offset no longer regenerates from the window over
+  values adjusted in the Inspector.
 - **2026-10-18 (second batch):** `avatar-y-offset@0.1.4`, `liltoon-material-override@0.2.10`,
   `magic-ray@0.1.5`, `orbit@0.2.3`. A field you clear by hand is no longer refilled from the selection;
   lilToon Outline Animation targets show the renderer and material slot; Orbit errors point to the
@@ -72,7 +76,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ALCOM and VCC share the repository list. After adding the URL once, use ALCOM's
 project manager to install or update the package versions; the latest unified lilToon
-release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.10`. Since `0.2.0`, Orbit contains only
+release is `com.suzuki-y0.jeni.liltoon-material-override@0.2.11`. Since `0.2.0`, Orbit contains only
 the Orbit Asset Generator; Eye Wobble moved to Avatar Reactive Motion. The generic package menus use English,
 descriptive paths under `Tools/Jeni Tools` (with matching
 `GameObject`, `Assets/Create`, and `Jeni Tools` component roots where applicable).
@@ -81,7 +85,7 @@ Register the NDMF, Modular Avatar, lilToon, and other external repositories in e
 
 ## lilToon package 9/10 integration
 
-`com.suzuki-y0.jeni.liltoon-material-override@0.2.10` is the canonical unified
+`com.suzuki-y0.jeni.liltoon-material-override@0.2.11` is the canonical unified
 release. It includes the former Preset Applicator Runtime and Editor sources
 under `Legacy/PresetApplicator/` and has no internal dependency on standalone
 package 10. Package 10 is retired and absent from the public index; migrate any
