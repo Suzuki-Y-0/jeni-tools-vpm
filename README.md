@@ -4,7 +4,7 @@
 The verification copies live in `MCP Project/Packages/com.suzuki-y0.jeni.*`; missing `.meta` GUIDs
 are taken from there or from `metadata/`.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 60 versions after
+The public index currently publishes 12 package IDs and 62 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
@@ -31,16 +31,16 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Current versions (2026-10-18, third batch)
+## Current versions (2026-10-18, fourth batch)
 
 | Package | Latest |
 |---|---|
 | avatar-prefab-material-exporter | 0.1.2 |
 | avatar-reactive-motion | 0.1.3 |
-| avatar-variant-integrator | 0.1.4 |
+| avatar-variant-integrator | 0.1.5 |
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
-| eye-texture-adapter | 0.1.3 |
+| eye-texture-adapter | 0.1.4 |
 | face-tracking-blendshape-composer | 0.1.2 |
 | facetra-prefab-exporter | 0.1.3 |
 | liltoon-material-override | 0.2.11 |
@@ -50,6 +50,8 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-10-18 (fourth batch):** `eye-texture-adapter@0.1.4`, `avatar-variant-integrator@0.1.5`.
+  The windows explain the tool's purpose and terms (eye profile; canonical avatar and variants) in plain words.
 - **2026-10-18 (third batch):** `avatar-y-offset@0.1.5`, `liltoon-material-override@0.2.11`,
   `orbit@0.2.4`, `avatar-reactive-motion@0.1.3`. Windows create and Inspectors adjust: each screen says so,
   windows can open existing configurations, and Avatar Y Offset no longer regenerates from the window over

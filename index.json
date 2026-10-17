@@ -221,6 +221,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.4/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.4.zip",
           "zipSHA256": "e3bff8b9be2a03aa220128a3073cd71ca55234d82035af21af9e5c8ccfae0b77"
+        },
+        "0.1.5": {
+          "name": "com.suzuki-y0.jeni.avatar-variant-integrator",
+          "displayName": "Avatar Variant Integrator",
+          "version": "0.1.5",
+          "description": "Jeni Tools - Avatar Variant Integrator.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.5/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.5.zip",
+          "zipSHA256": "c9facc8363630bd4fc0018555def6e3a752d40126fc690fa563352c8df93e891"
         }
       }
     },
@@ -457,6 +475,22 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.eye-texture-adapter-0.1.3/com.suzuki-y0.jeni.eye-texture-adapter-0.1.3.zip",
           "zipSHA256": "b37b8b1c798154b979aae433957acd4100ff418d4d1dac6689a2e09aee9dfa28"
+        },
+        "0.1.4": {
+          "name": "com.suzuki-y0.jeni.eye-texture-adapter",
+          "displayName": "Eye Texture Adapter",
+          "version": "0.1.4",
+          "description": "Jeni Tools - Eye Texture Adapter.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.eye-texture-adapter-0.1.4/com.suzuki-y0.jeni.eye-texture-adapter-0.1.4.zip",
+          "zipSHA256": "8b211706fd393e0aa951564cb7912771dbb5405918c86415fddcf2fb806bf6d3"
         }
       }
     },

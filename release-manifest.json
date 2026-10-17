@@ -360,6 +360,18 @@
       "version": "0.1.3",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.3/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.3.zip",
       "zipSHA256": "6e5e92ed4f3b37aeca531db70421cbc9c27366aacd6c719b80242f1e8faed545"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-variant-integrator",
+      "version": "0.1.5",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.5/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.5.zip",
+      "zipSHA256": "c9facc8363630bd4fc0018555def6e3a752d40126fc690fa563352c8df93e891"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.eye-texture-adapter",
+      "version": "0.1.4",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.eye-texture-adapter-0.1.4/com.suzuki-y0.jeni.eye-texture-adapter-0.1.4.zip",
+      "zipSHA256": "8b211706fd393e0aa951564cb7912771dbb5405918c86415fddcf2fb806bf6d3"
     }
   ]
 }
