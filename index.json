@@ -166,6 +166,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.2/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.2.zip",
           "zipSHA256": "08ff8796dd47f332e296fe029c0aa182a08025edc5f83a66d4681b5d9c4c32c6"
+        },
+        "0.1.3": {
+          "name": "com.suzuki-y0.jeni.avatar-variant-integrator",
+          "displayName": "Avatar Variant Integrator",
+          "version": "0.1.3",
+          "description": "Jeni Tools - Avatar Variant Integrator.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.3/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.3.zip",
+          "zipSHA256": "7b2655bf990a980e04c350e95fd56833437910777ac441be6833be4e5c7c40ee"
         }
       }
     },
@@ -206,6 +224,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-y-offset-0.1.1/com.suzuki-y0.jeni.avatar-y-offset-0.1.1.zip",
           "zipSHA256": "b33ea1139e4ac984fc6d00671b8bd4d2756444c4b0ff6c8287c687e0dab412b9"
+        },
+        "0.1.2": {
+          "name": "com.suzuki-y0.jeni.avatar-y-offset",
+          "displayName": "Avatar Y Offset",
+          "version": "0.1.2",
+          "description": "Jeni Tools - Avatar Y Offset.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-y-offset-0.1.2/com.suzuki-y0.jeni.avatar-y-offset-0.1.2.zip",
+          "zipSHA256": "47946005c7e4c6c7db1abb0c2e874b962ef40dd19b269d042c40cb414841e401"
         }
       }
     },
@@ -440,6 +476,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.2/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.2.zip",
           "zipSHA256": "7c7da71a227b9c785eec702cc0a0a71cd8ed23aab47df5fbddd2ddef1377c33e"
+        },
+        "0.1.3": {
+          "name": "com.suzuki-y0.jeni.facetra-prefab-exporter",
+          "displayName": "FaceTra Prefab Exporter",
+          "version": "0.1.3",
+          "description": "Jeni Tools - FaceTra Prefab Exporter.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0",
+            "com.suzuki-y0.jeni.face-tracking-blendshape-composer": ">=0.1.0 <0.2.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.3/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.3.zip",
+          "zipSHA256": "7d7403dedf36991d0e89bc940f7a97eacf6c502073a047c824248ea453eac0b2"
         }
       }
     },
@@ -596,6 +650,25 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.7/com.suzuki-y0.jeni.liltoon-material-override-0.2.7.zip",
           "zipSHA256": "8f1334f358bc084e549cbc86160d23bd7579dc10ba935ec11886f0d3450980e9"
+        },
+        "0.2.8": {
+          "name": "com.suzuki-y0.jeni.liltoon-material-override",
+          "displayName": "lilToon Material Override (Probe Anchor included)",
+          "version": "0.2.8",
+          "description": "Jeni Tools - lilToon Material Override (Probe Anchor included).",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "jp.lilxyzw.liltoon": ">=2.3.4 <3.0.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.8/com.suzuki-y0.jeni.liltoon-material-override-0.2.8.zip",
+          "zipSHA256": "a337bf1a518f03e79a334f6f564523522d50b4d39f8fb854478d780522508c25"
         }
       }
     },
@@ -654,6 +727,24 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.2/com.suzuki-y0.jeni.magic-ray-0.1.2.zip",
           "zipSHA256": "9be4e7084e727bdc209e502bb40d2d656452c03b5fb295bbe5b67d80e6e15da2"
+        },
+        "0.1.3": {
+          "name": "com.suzuki-y0.jeni.magic-ray",
+          "displayName": "Magic Ray Gimmick Builder",
+          "version": "0.1.3",
+          "description": "Jeni Tools - Magic Ray Gimmick Builder.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.3/com.suzuki-y0.jeni.magic-ray-0.1.3.zip",
+          "zipSHA256": "fc1d85bf4b2a2c14fa2dbd027dd2d0d87a2497b3169cbf526fe49885480e6e0b"
         }
       }
     },

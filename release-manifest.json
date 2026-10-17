@@ -1,5 +1,5 @@
 {
-  "version": "0.2.7",
+  "version": "0.2.8",
   "packages": [
     {
       "name": "com.suzuki-y0.jeni.avatar-prefab-material-exporter",
@@ -252,6 +252,36 @@
       "version": "0.2.1",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.orbit-0.2.1/com.suzuki-y0.jeni.orbit-0.2.1.zip",
       "zipSHA256": "5a43aaea368fa162cb98e3ae2ae456a18a781673b0919affeaa553a75a1a3800"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.facetra-prefab-exporter",
+      "version": "0.1.3",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.3/com.suzuki-y0.jeni.facetra-prefab-exporter-0.1.3.zip",
+      "zipSHA256": "7d7403dedf36991d0e89bc940f7a97eacf6c502073a047c824248ea453eac0b2"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-variant-integrator",
+      "version": "0.1.3",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.3/com.suzuki-y0.jeni.avatar-variant-integrator-0.1.3.zip",
+      "zipSHA256": "7b2655bf990a980e04c350e95fd56833437910777ac441be6833be4e5c7c40ee"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-y-offset",
+      "version": "0.1.2",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-y-offset-0.1.2/com.suzuki-y0.jeni.avatar-y-offset-0.1.2.zip",
+      "zipSHA256": "47946005c7e4c6c7db1abb0c2e874b962ef40dd19b269d042c40cb414841e401"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.liltoon-material-override",
+      "version": "0.2.8",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.liltoon-material-override-0.2.8/com.suzuki-y0.jeni.liltoon-material-override-0.2.8.zip",
+      "zipSHA256": "a337bf1a518f03e79a334f6f564523522d50b4d39f8fb854478d780522508c25"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.magic-ray",
+      "version": "0.1.3",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.magic-ray-0.1.3/com.suzuki-y0.jeni.magic-ray-0.1.3.zip",
+      "zipSHA256": "fc1d85bf4b2a2c14fa2dbd027dd2d0d87a2497b3169cbf526fe49885480e6e0b"
     }
   ]
 }
