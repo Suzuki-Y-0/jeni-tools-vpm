@@ -41,7 +41,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
 | eye-texture-adapter | 0.1.4 |
-| face-tracking-blendshape-composer | 0.1.5 |
+| face-tracking-blendshape-composer | 0.1.6 |
 | facetra-prefab-exporter | 0.1.3 |
 | liltoon-material-override | 0.2.11 |
 | magic-ray | 0.1.5 |
@@ -50,6 +50,8 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-11-03 (fourth):** `face-tracking-blendshape-composer@0.1.6`. Opening another recipe no longer
+  shows the strength value still being typed in the previous recipe; the saved values were always correct.
 - **2026-11-03 (third):** `face-tracking-blendshape-composer@0.1.5`. "Create Composer Component" places
   the template again: the template Prefab no longer uses a reserved object ID that made Unity fail to load it.
 - **2026-11-03 (second):** `face-tracking-blendshape-composer@0.1.4`. The LIVE preview is visible while
