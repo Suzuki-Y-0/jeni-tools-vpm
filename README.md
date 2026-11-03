@@ -31,7 +31,7 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Current versions (2026-10-18, fourth batch)
+## Current versions (2026-11-03)
 
 | Package | Latest |
 |---|---|
@@ -41,7 +41,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
 | eye-texture-adapter | 0.1.4 |
-| face-tracking-blendshape-composer | 0.1.2 |
+| face-tracking-blendshape-composer | 0.1.3 |
 | facetra-prefab-exporter | 0.1.3 |
 | liltoon-material-override | 0.2.11 |
 | magic-ray | 0.1.5 |
@@ -50,6 +50,9 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-11-03:** `face-tracking-blendshape-composer@0.1.3`. The Composer Inspector caches the full
+  reference/target mesh comparison instead of repeating it on every repaint, which made it very slow on
+  face meshes. Build-time validation still compares the meshes in full every time.
 - **2026-10-18 (fourth batch):** `eye-texture-adapter@0.1.4`, `avatar-variant-integrator@0.1.5`.
   The windows explain the tool's purpose and terms (eye profile; canonical avatar and variants) in plain words.
 - **2026-10-18 (third batch):** `avatar-y-offset@0.1.5`, `liltoon-material-override@0.2.11`,

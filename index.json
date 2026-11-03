@@ -543,6 +543,22 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.2/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.2.zip",
           "zipSHA256": "651e7f5f09cf0b4125ff527952ffaad0164c2ff44f4bb51f809025b37faf932d"
+        },
+        "0.1.3": {
+          "name": "com.suzuki-y0.jeni.face-tracking-blendshape-composer",
+          "displayName": "Face Tracking Blendshape Composer",
+          "version": "0.1.3",
+          "description": "Jeni Tools - Face Tracking Blendshape Composer.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.3/com.suzuki-y0.jeni.face-tracking-blendshape-composer-0.1.3.zip",
+          "zipSHA256": "89ac6a8fac96ef7c127dcad1352cf64e65a0576e77025d440d1c970806963792"
         }
       }
     },
