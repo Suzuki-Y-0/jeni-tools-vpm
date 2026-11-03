@@ -41,7 +41,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
 | eye-texture-adapter | 0.1.4 |
-| face-tracking-blendshape-composer | 0.1.3 |
+| face-tracking-blendshape-composer | 0.1.4 |
 | facetra-prefab-exporter | 0.1.3 |
 | liltoon-material-override | 0.2.11 |
 | magic-ray | 0.1.5 |
@@ -50,6 +50,8 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-11-03 (second):** `face-tracking-blendshape-composer@0.1.4`. The LIVE preview is visible while
+  NDMF previews are enabled: NDMF previews pause only while LIVE is shown and resume when it ends.
 - **2026-11-03:** `face-tracking-blendshape-composer@0.1.3`. The Composer Inspector caches the full
   reference/target mesh comparison instead of repeating it on every repaint, which made it very slow on
   face meshes. Build-time validation still compares the meshes in full every time.
