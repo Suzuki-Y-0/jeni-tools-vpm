@@ -31,7 +31,7 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Current versions (2026-11-03)
+## Current versions (2026-11-05)
 
 | Package | Latest |
 |---|---|
@@ -40,7 +40,7 @@ The source-side static audit and staged Unity acceptance plan are documented in
 | avatar-variant-integrator | 0.1.5 |
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
-| eye-texture-adapter | 0.1.4 |
+| eye-texture-adapter | 0.1.5 |
 | face-tracking-blendshape-composer | 0.1.6 |
 | facetra-prefab-exporter | 0.1.3 |
 | liltoon-material-override | 0.2.11 |
@@ -50,6 +50,9 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-11-05:** `eye-texture-adapter@0.1.5`. Both windows are rebuilt with a cleaner look. The converter
+  previews by itself, always shows what is missing, and can create the destination profile; the profile
+  maker puts the canvas beside the controls, shows one step at a time, and asks before closing unsaved work.
 - **2026-11-03 (fourth):** `face-tracking-blendshape-composer@0.1.6`. Opening another recipe no longer
   shows the strength value still being typed in the previous recipe; the saved values were always correct.
 - **2026-11-03 (third):** `face-tracking-blendshape-composer@0.1.5`. "Create Composer Component" places
