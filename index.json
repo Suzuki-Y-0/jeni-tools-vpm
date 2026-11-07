@@ -127,6 +127,25 @@
           },
           "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.3/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.3.zip",
           "zipSHA256": "6e5e92ed4f3b37aeca531db70421cbc9c27366aacd6c719b80242f1e8faed545"
+        },
+        "0.1.4": {
+          "name": "com.suzuki-y0.jeni.avatar-reactive-motion",
+          "displayName": "Avatar Reactive Motion",
+          "version": "0.1.4",
+          "description": "Jeni Tools - Avatar Reactive Motion.",
+          "unity": "2022.3",
+          "author": {
+            "name": "Suzuki-Y-0",
+            "url": "https://github.com/Suzuki-Y-0"
+          },
+          "vpmDependencies": {
+            "nadena.dev.ndmf": ">=1.14.8 <2.0.0",
+            "nadena.dev.modular-avatar": ">=1.18.7 <2.0.0",
+            "com.vrchat.avatars": ">=3.10.5 <3.11.0",
+            "com.suzuki-y0.jeni.face-tracking-blendshape-composer": ">=0.1.0 <0.2.0"
+          },
+          "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.4/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.4.zip",
+          "zipSHA256": "1275ec4ea7bb189491c9998e7fd8811e5a5281f668c6bc3b9bb89f3ee271d1c2"
         }
       }
     },

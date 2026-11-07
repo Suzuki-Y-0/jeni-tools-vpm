@@ -1,5 +1,5 @@
 {
-  "version": "0.2.11",
+  "version": "0.1.4",
   "packages": [
     {
       "name": "com.suzuki-y0.jeni.avatar-prefab-material-exporter",
@@ -402,6 +402,12 @@
       "version": "0.1.5",
       "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.eye-texture-adapter-0.1.5/com.suzuki-y0.jeni.eye-texture-adapter-0.1.5.zip",
       "zipSHA256": "34a213cf0d31649017cbf8e83c5c0b0abc668286bdf09bbc9c5f7651d805fd35"
+    },
+    {
+      "name": "com.suzuki-y0.jeni.avatar-reactive-motion",
+      "version": "0.1.4",
+      "url": "https://github.com/Suzuki-Y-0/jeni-tools-vpm/releases/download/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.4/com.suzuki-y0.jeni.avatar-reactive-motion-0.1.4.zip",
+      "zipSHA256": "1275ec4ea7bb189491c9998e7fd8811e5a5281f668c6bc3b9bb89f3ee271d1c2"
     }
   ]
 }

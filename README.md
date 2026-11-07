@@ -4,7 +4,7 @@
 The verification copies live in `MCP Project/Packages/com.suzuki-y0.jeni.*`; missing `.meta` GUIDs
 are taken from there or from `metadata/`.
 It writes only to `dist-ready/`; it never edits or synchronizes the Unity project.
-The public index currently publishes 12 package IDs and 62 versions after
+The public index currently publishes 12 package IDs and 68 versions after
 retiring standalone package 10 (`liltoon-preset-applicator`) and the pre-unified
 `liltoon-material-override` `0.1.x` releases.
 
@@ -31,12 +31,12 @@ Standalone package 10 is retired and has no public index entries.
 The source-side static audit and staged Unity acceptance plan are documented in
 [`TOOL_STATIC_AUDIT.md`](TOOL_STATIC_AUDIT.md).
 
-## Current versions (2026-11-05)
+## Current versions (2026-11-08)
 
 | Package | Latest |
 |---|---|
 | avatar-prefab-material-exporter | 0.1.2 |
-| avatar-reactive-motion | 0.1.3 |
+| avatar-reactive-motion | 0.1.4 |
 | avatar-variant-integrator | 0.1.5 |
 | avatar-y-offset | 0.1.5 |
 | cigarette | 0.1.2 |
@@ -50,6 +50,11 @@ The source-side static audit and staged Unity acceptance plan are documented in
 
 ## Release notes
 
+- **2026-11-08:** `avatar-reactive-motion@0.1.4`. Transform motions merge into FX so they can read the VRCFT
+  template's values; rotation uses quaternions and Generated PhysBone rotates around the target's pivot. Reversed
+  response curves reach full strength at the input minimum, turning a Motion off releases its target, and cheek
+  shapes without a transfer source no longer stop every Motion. New: pick the parameter from the template's
+  expressions, and a reaction direction toggle.
 - **2026-11-05:** `eye-texture-adapter@0.1.5`. Both windows are rebuilt with a cleaner look. The converter
   previews by itself, always shows what is missing, and can create the destination profile; the profile
   maker puts the canvas beside the controls, shows one step at a time, and asks before closing unsaved work.
